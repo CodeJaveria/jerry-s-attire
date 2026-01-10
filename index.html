@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+  :root {
+    --dark-bg: #2b1d16;    /* Dark Chocolate */
+    --caramel: #af6f43;    /* Warm Caramel */
+    --off-white: #f9f4ef;  /* Creamy Off-White */
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    background-color: var(--off-white);
+  }
+
+  header {
+    background-color: var(--dark-bg);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--caramel);
+  }
+
+  /* --- LOGO STYLING --- */
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-image {
+    height: 60px; /* Adjust this based on your logo size */
+    width: auto;
+    margin-right: 15px;
+  }
+
+  .brand-name {
+    color: var(--off-white);
+    font-size: 22px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  /* -------------------- */
+
+  nav a {
+    color: var(--off-white);
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+  }
+
+  nav a:hover {
+    color: var(--caramel);
+  }
+
+  .hero {
+    height: 500px;
+    background: linear-gradient(rgba(43, 29, 22, 0.8), rgba(43, 29, 22, 0.8)), url('your-hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--off-white);
+  }
+
+  .btn {
+    border: 1px solid var(--caramel);
+    color: var(--off-white);
+    padding: 12px 35px;
+    text-decoration: none;
+    margin-top: 25px;
+    transition: 0.4s;
+  }
+
+  .btn:hover {
+    background-color: var(--caramel);
+    color: white;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="./Assets/logo.png" alt="Jerry's Edit fashion brand logo featuring elegant typography in caramel and off-white tones" class="logo-image">
+    <div class="brand-name">Jerry's Edit</div>
+  </div>
+  
+  <nav>
+    <a href="#">Shop All</a>
+    <a href="#">The Skirt Edit</a>
+    <a href="#">Our Story</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1 style="font-size: 50px;">Elevated Attire</h1>
+  <p>Where Caramel meets Off-White Sophistication.</p>
+  <a href="#" class="btn">DISCOVER THE LINE</a>
+</div>
+
+</body>
+</html>
