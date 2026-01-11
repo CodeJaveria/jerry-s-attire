@@ -1,97 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Libre+Baskerville:wght@400&display=swap" rel="stylesheet">
+
 <style>
-  :root {
-    --dark-bg: #2b1d16;    /* Dark Chocolate */
-    --caramel: #af6f43;    /* Warm Caramel */
-    --off-white: #f9f4ef;  /* Creamy Off-White */
-  }
+:root {
+  --dark-bg: #2b1d16;
+  --caramel: #af6f43;
+  --off-white: #f9f4ef;
+}
 
-  body {
-    margin: 0;
-    font-family: 'Playfair Display', 'Georgia', serif;
-    background-color: var(--off-white);
-  }
+* {
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+  font-family: 'Libre Baskerville', serif;
+  background-color: var(--off-white);
+  color: var(--dark-bg);
+}
+
+/* ---------- HEADER ---------- */
+header {
+  background-color: var(--dark-bg);
+  padding: 18px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--caramel);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-image {
+  height: 55px;
+}
+
+.brand-name {
+  color: var(--off-white);
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  letter-spacing: 1.5px;
+}
+
+nav a {
+  color: var(--off-white);
+  text-decoration: none;
+  margin-left: 32px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--caramel);
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  height: 85vh;
+  background:
+    linear-gradient(
+      rgba(175, 111, 67, 0.45),   /* caramel light */
+      rgba(43, 29, 22, 0.45)      /* chocolate depth */
+    ),
+    url('your-hero-image.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 80px;
+  color: var(--off-white);
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 56px;
+  margin-bottom: 12px;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.hero p {
+  font-size: 15px;
+  max-width: 420px;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+/* ---------- BUTTON ---------- */
+.btn {
+  margin-top: 35px;
+  width: fit-content;
+  padding: 14px 38px;
+  border: 2px solid var(--caramel);
+  color: var(--off-white);
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  font-size: 13px;
+  transition: all 0.35s ease;
+}
+
+.btn:hover {
+  background-color: var(--caramel);
+  transform: translateY(-2px);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
   header {
-    background-color: var(--dark-bg);
-    padding: 15px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid var(--caramel);
+    padding: 15px 25px;
   }
-
-  /* --- LOGO STYLING --- */
-  .logo-container {
-    display: flex;
-    align-items: center;
-  }
-
-  .logo-image {
-    height: 60px; /* Adjust this based on your logo size */
-    width: auto;
-    margin-right: 15px;
-  }
-
-  .brand-name {
-    color: var(--off-white);
-    font-size: 22px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-  /* -------------------- */
 
   nav a {
-    color: var(--off-white);
-    text-decoration: none;
-    margin-left: 25px;
-    font-size: 14px;
-    letter-spacing: 1px;
-    transition: 0.3s;
-  }
-
-  nav a:hover {
-    color: var(--caramel);
+    margin-left: 18px;
   }
 
   .hero {
-    height: 500px;
-    background: linear-gradient(rgba(43, 29, 22, 0.8), rgba(43, 29, 22, 0.8)), url('your-hero-image.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: var(--off-white);
+    padding: 40px;
+    height: auto;
   }
 
-  .btn {
-    border: 1px solid var(--caramel);
-    color: var(--off-white);
-    padding: 12px 35px;
-    text-decoration: none;
-    margin-top: 25px;
-    transition: 0.4s;
+  .hero h1 {
+    font-size: 40px;
   }
-
-  .btn:hover {
-    background-color: var(--caramel);
-    color: white;
-  }
+}
 </style>
 </head>
+
 <body>
 
 <header>
   <div class="logo-container">
-    <img src="./Assets/logo.png" alt="Jerry's Edit fashion brand logo featuring elegant typography in caramel and off-white tones" class="logo-image">
+    <img src="./Assets/Logo.png" alt="Jerry's Edit Logo" class="logo-image">
     <div class="brand-name">Jerry's Edit</div>
   </div>
-  
+
   <nav>
     <a href="#">Shop All</a>
     <a href="#">The Skirt Edit</a>
@@ -99,11 +151,11 @@
   </nav>
 </header>
 
-<div class="hero">
-  <h1 style="font-size: 50px;">Elevated Attire</h1>
-  <p>Where Caramel meets Off-White Sophistication.</p>
+<section class="hero">
+  <h1>Elevated Attire</h1>
+  <p>Where Caramel meets Off-White sophistication, crafted for modern elegance.</p>
   <a href="#" class="btn">DISCOVER THE LINE</a>
-</div>
+</section>
 
 </body>
 </html>
