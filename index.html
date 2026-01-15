@@ -1,161 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Libre+Baskerville:wght@400&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Libre+Baskerville:wght@400&display=swap" rel="stylesheet">
 
-<style>
-:root {
-  --dark-bg: #2b1d16;
-  --caramel: #af6f43;
-  --off-white: #f9f4ef;
-}
+  <style>
+    :root {
+      --dark-bg: #2b1d16;
+      --caramel: #af6f43;
+      --off-white: #f9f4ef;
+    }
 
-* {
-  box-sizing: border-box;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-body {
-  margin: 0;
-  font-family: 'Libre Baskerville', serif;
-  background-color: var(--off-white);
-  color: var(--dark-bg);
-}
+    body {
+      margin: 0;
+      font-family: 'Libre Baskerville', serif;
+      background-color: var(--off-white);
+      color: var(--dark-bg);
+    }
 
-/* ---------- HEADER ---------- */
-header {
-  background-color: var(--dark-bg);
-  padding: 18px 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid var(--caramel);
-}
+    /* ---------- HEADER ---------- */
+    header {
+      background-color: var(--dark-bg);
+      padding: 18px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--caramel);
+    }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
-.logo-image {
-  height: 55px;
-}
+    .logo-image {
+      height: 55px;
+    }
 
-.brand-name {
-  color: var(--off-white);
-  font-family: 'Playfair Display', serif;
-  font-size: 24px;
-  letter-spacing: 1.5px;
-}
+    .brand-name {
+      color: var(--off-white);
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      letter-spacing: 1.5px;
+    }
 
-nav a {
-  color: var(--off-white);
-  text-decoration: none;
-  margin-left: 32px;
-  font-size: 14px;
-  letter-spacing: 1px;
-  transition: color 0.3s ease;
-}
+    nav a {
+      color: var(--off-white);
+      text-decoration: none;
+      margin-left: 32px;
+      font-size: 14px;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
 
-nav a:hover {
-  color: var(--caramel);
-}
+    nav a:hover {
+      color: var(--caramel);
+    }
 
-/* ---------- HERO ---------- */
-.hero {
-  height: 85vh;
-  background:
-    linear-gradient(
-      rgba(175, 111, 67, 0.45),   /* caramel light */
-      rgba(43, 29, 22, 0.45)      /* chocolate depth */
-    ),
-    url('your-hero-image.jpg');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 80px;
-  color: var(--off-white);
-}
+   
+    .hero {
+      height: 90vh;
+      background:
+        linear-gradient(
+          rgba(175, 111, 67, 0.45),
+          rgba(43, 29, 22, 0.45)
+        ),
+        url('./Assets/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 80px;
+      color: var(--off-white);
+    }
 
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 56px;
-  margin-bottom: 12px;
-  text-shadow: 0 6px 18px rgba(0,0,0,0.25);
-}
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 58px;
+      margin-bottom: 12px;
+      text-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    }
 
-.hero p {
-  font-size: 15px;
-  max-width: 420px;
-  line-height: 1.7;
-  opacity: 0.95;
-}
+    .hero p {
+      font-size: 15px;
+      max-width: 420px;
+      line-height: 1.7;
+    }
 
-/* ---------- BUTTON ---------- */
-.btn {
-  margin-top: 35px;
-  width: fit-content;
-  padding: 14px 38px;
-  border: 2px solid var(--caramel);
-  color: var(--off-white);
-  text-decoration: none;
-  letter-spacing: 1.5px;
-  font-size: 13px;
-  transition: all 0.35s ease;
-}
+    .btn {
+      margin-top: 35px;
+      width: fit-content;
+      padding: 14px 38px;
+      border: 2px solid var(--caramel);
+      color: var(--off-white);
+      text-decoration: none;
+      letter-spacing: 1.5px;
+      font-size: 13px;
+      transition: all 0.35s ease;
+    }
 
-.btn:hover {
-  background-color: var(--caramel);
-  transform: translateY(-2px);
-}
+    .btn:hover {
+      background-color: var(--caramel);
+      transform: translateY(-2px);
+    }
 
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 768px) {
-  header {
-    padding: 15px 25px;
-  }
+   
+    .collection {
+      padding: 110px 90px;
+      text-align: center;
+    }
 
-  nav a {
-    margin-left: 18px;
-  }
+    .collection h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
 
-  .hero {
-    padding: 40px;
-    height: auto;
-  }
+    .collection-subtitle {
+      font-size: 14px;
+      max-width: 520px;
+      margin: 0 auto 65px;
+      line-height: 1.8;
+      color: #5a463b;
+    }
 
-  .hero h1 {
-    font-size: 40px;
-  }
-}
-</style>
+    .collection-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 55px;
+    }
+
+    .collection-card {
+      background-color: #fff;
+      border: 1px solid rgba(175, 111, 67, 0.35);
+      padding: 22px;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .collection-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 45px rgba(43, 29, 22, 0.18);
+    }
+
+    .collection-card img {
+      width: 100%;
+      height: 400px;   
+      object-fit: cover;
+      margin-bottom: 24px;
+    }
+
+    .collection-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      letter-spacing: 1.2px;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 900px) {
+      header {
+        padding: 15px 25px;
+      }
+
+      nav a {
+        margin-left: 18px;
+      }
+
+      .hero {
+        padding: 40px;
+        height: auto;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .collection {
+        padding: 80px 40px;
+      }
+
+      .collection-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .collection-card img {
+        height: 420px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo-container">
-    <img src="./Assets/Logo.png" alt="Jerry's Edit Logo" class="logo-image">
-    <div class="brand-name">Jerry's Attire</div>
-  </div>
+  <!-- HEADER -->
+  <header>
+    <div class="logo-container">
+      <img src="./Assets/Logo.png" alt="Jerry's Attire Logo" class="logo-image">
+      <div class="brand-name">Jerry's Attire</div>
+    </div>
 
-  <nav>
-    <a href="#">Shop All</a>
-    <a href="#">The Skirt Attire</a>
-    <a href="#">Our Story</a>
-  </nav>
-</header>
+    <nav>
+      <a href="#">Shop All</a>
+      <a href="#">The Skirt Attire</a>
+      <a href="#">Our Story</a>
+    </nav>
+  </header>
 
-<section class="hero">
-  <h1>Elevated Attire</h1>
-  <p>Where Colors meet sophistication, crafted for modern elegance.</p>
-  <a href="#" class="btn">DISCOVER THE LINE</a>
-</section>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Elevated Attire</h1>
+    <p>Where colors meet sophistication, crafted for modern elegance.</p>
+    <a href="#" class="btn">DISCOVER THE LINE</a>
+  </section>
+
+  <!-- COLLECTION -->
+  <section class="collection">
+    <h2>New Arrivals</h2>
+    <p class="collection-subtitle">
+      Curated designs inspired by timeless silhouettes and earthy tones.
+    </p>
+
+    <div class="collection-grid">
+      <div class="collection-card">
+        <img src="./Assets/brown.jpg" alt="Skirt Collection">
+        <h3>Classic Skirt Set</h3>
+      </div>
+
+      <div class="collection-card">
+        <img src="./Assets/modern.jpg" alt="Modern Wear">
+        <h3>Modern Earth Tones</h3>
+      </div>
+
+      <div class="collection-card">
+        <img src="./Assets/evening.jpg" alt="Evening Wear">
+        <h3>Evening Elegance</h3>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
