@@ -172,7 +172,7 @@
 
     .footer-container {
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr 2fr;
+      grid-template-columns: 2fr 1fr 1fr 2fr 2fr;
       gap: 60px;
       margin-bottom: 50px;
     }
@@ -189,22 +189,17 @@
       margin-bottom: 20px;
     }
 
-    .footer p {
+    .footer p,
+    .footer a {
       font-size: 14px;
       line-height: 1.8;
       color: #d8cfc9;
-    }
-
-    .footer-links a {
-      display: block;
-      color: #d8cfc9;
       text-decoration: none;
-      font-size: 13px;
-      margin-bottom: 14px;
-      transition: color 0.3s ease;
+      display: block;
+      margin-bottom: 10px;
     }
 
-    .footer-links a:hover {
+    .footer a:hover {
       color: var(--caramel);
     }
 
@@ -236,131 +231,116 @@
       padding-top: 25px;
     }
 
-    /* ---------- RESPONSIVE ---------- */
     @media (max-width: 900px) {
-      header {
-        padding: 15px 25px;
-      }
-
-      nav a {
-        margin-left: 18px;
-      }
-
-      .hero {
-        padding: 40px;
-        height: auto;
-      }
-
-      .hero h1 {
-        font-size: 42px;
-      }
-
-      .collection {
-        padding: 80px 40px;
-      }
-
-      .collection-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer {
-        padding: 70px 35px 25px;
-      }
-
-      .footer-container {
-        grid-template-columns: 1fr;
-        gap: 45px;
-      }
+      header { padding: 15px 25px; }
+      nav a { margin-left: 18px; }
+      .hero { padding: 40px; height: auto; }
+      .hero h1 { font-size: 42px; }
+      .collection { padding: 80px 40px; }
+      .collection-grid { grid-template-columns: 1fr; }
+      .footer { padding: 70px 35px 25px; }
+      .footer-container { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="logo-container">
-      <img src="./Assets/Logo.png" alt="Jerry's Attire Logo" class="logo-image">
-      <div class="brand-name">Jerry's Attire</div>
+<!-- HEADER -->
+<header>
+  <div class="logo-container">
+    <img src="./Assets/Logo.png" alt="Jerry's Attire Logo" class="logo-image">
+    <div class="brand-name">Jerry's Attire</div>
+  </div>
+
+  <nav>
+    <a href="#">Shop All</a>
+    <a href="#">The Skirt Attire</a>
+    <a href="#">Our Story</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Elevated Attire</h1>
+  <p>Where colors meet sophistication, crafted for modern elegance.</p>
+  <a href="#" class="btn">DISCOVER THE LINE</a>
+</section>
+
+<!-- COLLECTION -->
+<section class="collection">
+  <h2>New Arrivals</h2>
+  <p class="collection-subtitle">
+    Curated designs inspired by timeless silhouettes and earthy tones.
+  </p>
+
+  <div class="collection-grid">
+    <div class="collection-card">
+      <img src="./Assets/brown.jpg" alt="Skirt Collection">
+      <h3>Classic Skirt Set</h3>
     </div>
 
-    <nav>
+    <div class="collection-card">
+      <img src="./Assets/modern.jpg" alt="Modern Wear">
+      <h3>Modern Earth Tones</h3>
+    </div>
+
+    <div class="collection-card">
+      <img src="./Assets/evening.jpg" alt="Evening Wear">
+      <h3>Evening Elegance</h3>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div>
+      <h3>Jerry's Attire</h3>
+      <p>
+        Timeless fashion crafted with elegance,
+        inspired by earthy tones and modern silhouettes.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Explore</h4>
       <a href="#">Shop All</a>
-      <a href="#">The Skirt Attire</a>
+      <a href="#">New Arrivals</a>
       <a href="#">Our Story</a>
-    </nav>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Elevated Attire</h1>
-    <p>Where colors meet sophistication, crafted for modern elegance.</p>
-    <a href="#" class="btn">DISCOVER THE LINE</a>
-  </section>
-
-  <!-- COLLECTION -->
-  <section class="collection">
-    <h2>New Arrivals</h2>
-    <p class="collection-subtitle">
-      Curated designs inspired by timeless silhouettes and earthy tones.
-    </p>
-
-    <div class="collection-grid">
-      <div class="collection-card">
-        <img src="./Assets/brown.jpg" alt="Skirt Collection">
-        <h3>Classic Skirt Set</h3>
-      </div>
-
-      <div class="collection-card">
-        <img src="./Assets/modern.jpg" alt="Modern Wear">
-        <h3>Modern Earth Tones</h3>
-      </div>
-
-      <div class="collection-card">
-        <img src="./Assets/evening.jpg" alt="Evening Wear">
-        <h3>Evening Elegance</h3>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-container">
-
-      <div>
-        <h3>Jerry's Attire</h3>
-        <p>
-          Timeless fashion crafted with elegance,
-          inspired by earthy tones and modern silhouettes.
-        </p>
-      </div>
-
-      <div class="footer-links">
-        <h4>Explore</h4>
-        <a href="#">Shop All</a>
-        <a href="#">New Arrivals</a>
-        <a href="#">Our Story</a>
-      </div>
-
-      <div class="footer-links">
-        <h4>Support</h4>
-        <a href="#">Contact</a>
-        <a href="#">Shipping</a>
-        <a href="#">Privacy Policy</a>
-      </div>
-
-      <div class="footer-newsletter">
-        <h4>Join Our World</h4>
-        <input type="email" placeholder="Your email address">
-        <button>SUBSCRIBE</button>
-      </div>
-
     </div>
 
-    <div class="footer-bottom">
-      © 2026 Jerry's Attire. All Rights Reserved.
+    <div class="footer-links">
+      <h4>Support</h4>
+      <a href="#">Contact</a>
+      <a href="#">Shipping</a>
+      <a href="#">Privacy Policy</a>
     </div>
-  </footer>
+
+    <div class="footer-newsletter">
+      <h4>Join Our World</h4>
+      <input type="email" placeholder="Your email address">
+      <button>SUBSCRIBE</button>
+    </div>
+
+    <!-- ✅ CONTACT COLUMN -->
+    <div>
+      <h4>Get in Touch</h4>
+      <p>📍 Lahore, Pakistan</p>
+      <a href="tel:+923054563175">📞 +92 305 4563175</a>
+      <a href="https://wa.me/923054563175" target="_blank">💬 WhatsApp</a>
+      <a href="mailto:javeriasharif145@gmail.com">✉️ Email</a>
+      <a href="https://www.instagram.com/javeriasharif456" target="_blank">Instagram</a>
+      <a href="https://www.snapchat.com/add/javeriashari_20" target="_blank">Snapchat</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Jerry's Attire. All Rights Reserved.
+  </div>
+</footer>
 
 </body>
 </html>
