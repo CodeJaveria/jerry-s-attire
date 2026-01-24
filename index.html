@@ -97,10 +97,11 @@
     </div>
 
     <div class="footer-newsletter">
-      <h4>Join Our World!</h4>
-      <input type="email" placeholder="Your email address">
-      <button>SUBSCRIBE</button>
-    </div>
+  <h4>Join Our World!</h4>
+  <input type="email" id="newsletterEmail" placeholder="Your email address">
+  <button onclick="subscribe()">SUBSCRIBE</button>
+  <p id="subscribeMsg" style="margin-top:8px; font-size:13px;"></p>
+</div>
 
     <div>
       <h4>Get in Touch</h4>
@@ -118,6 +119,24 @@
     © 2026 Jerry's Attire. All Rights Reserved.
   </div>
 </footer>
+<script>
+  function subscribe() {
+    const emailInput = document.getElementById("newsletterEmail");
+    const msg = document.getElementById("subscribeMsg");
+    const email = emailInput.value.trim();
+
+    if (email === "") {
+      msg.textContent = "Please enter your email.";
+      msg.style.color = "red";
+      emailInput.focus();
+    } else {
+      msg.textContent = "Thank you for subscribing!";
+      msg.style.color = "#af6f43"; // caramel color
+      emailInput.value = ""; // input clear ho jaye
+    }
+  }
+</script>
+
 
 </body>
 </html>
