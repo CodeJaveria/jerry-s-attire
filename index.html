@@ -66,7 +66,7 @@
       color: var(--caramel);
     }
 
-    
+    /* ---------- HERO ---------- */
     .hero {
       height: 90vh;
       background:
@@ -111,7 +111,7 @@
       transform: translateY(-2px);
     }
 
-    
+    /* ---------- COLLECTION ---------- */
     .collection {
       padding: 110px 90px;
       text-align: center;
@@ -162,7 +162,50 @@
       letter-spacing: 1.2px;
     }
 
-   
+    /* ---------- OUR WORK (NEW) ---------- */
+    .our-work {
+      padding: 110px 90px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .our-work h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .our-work-subtitle {
+      font-size: 14px;
+      max-width: 520px;
+      margin: 0 auto 65px;
+      line-height: 1.8;
+      color: #5a463b;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 45px;
+    }
+
+    .work-card {
+      border: 1px solid rgba(175,111,67,0.35);
+      overflow: hidden;
+    }
+
+    .work-card img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .work-card:hover img {
+      transform: scale(1.08);
+    }
+
+    /* ---------- FOOTER ---------- */
     .footer {
       background-color: var(--dark-bg);
       color: var(--off-white);
@@ -236,8 +279,8 @@
       nav a { margin-left: 18px; }
       .hero { padding: 40px; height: auto; }
       .hero h1 { font-size: 42px; }
-      .collection { padding: 80px 40px; }
-      .collection-grid { grid-template-columns: 1fr; }
+      .collection, .our-work { padding: 80px 40px; }
+      .collection-grid, .work-grid { grid-template-columns: 1fr; }
       .footer { padding: 70px 35px 25px; }
       .footer-container { grid-template-columns: 1fr; }
     }
@@ -246,13 +289,11 @@
 
 <body>
 
-
 <header>
   <div class="logo-container">
-    <img src="./Assets/Logo.png" alt="Jerry's Attire Logo" class="logo-image">
+    <img src="./Assets/Logo.png" class="logo-image">
     <div class="brand-name">Jerry's Attire</div>
   </div>
-
   <nav>
     <a href="#">Shop All</a>
     <a href="#">The Skirt Attire</a>
@@ -260,37 +301,49 @@
   </nav>
 </header>
 
-
 <section class="hero">
   <h1>Elevated Attire</h1>
   <p>Where colors meet sophistication, crafted for modern elegance.</p>
   <a href="#" class="btn">DISCOVER THE LINE</a>
 </section>
 
-
 <section class="collection">
   <h2>New Arrivals</h2>
   <p class="collection-subtitle">
-Expertly tailored works informed by ageless structures and terrestrial palettes.  </p>
+    Expertly tailored works informed by ageless structures and terrestrial palettes.
+  </p>
 
   <div class="collection-grid">
     <div class="collection-card">
-      <img src="./Assets/brown.jpg" alt="Skirt Collection">
+      <img src="./Assets/brown.jpg">
       <h3>Classic Skirts</h3>
     </div>
-
     <div class="collection-card">
-      <img src="./Assets/modern.jpg" alt="Modern Wear">
+      <img src="./Assets/modern.jpg">
       <h3>Modern Earth Tones</h3>
     </div>
-
     <div class="collection-card">
-      <img src="./Assets/evening.jpg" alt="Evening Wear">
+      <img src="./Assets/evening.jpg">
       <h3>Evening Elegance</h3>
     </div>
   </div>
 </section>
 
+<section class="our-work">
+  <h2>Our Work</h2>
+  <p class="our-work-subtitle">
+    A refined showcase of our signature skirt designs.
+  </p>
+
+  <div class="work-grid">
+    <div class="work-card"><img src="./Assets/skirt1.jpg"></div>
+    <div class="work-card"><img src="./Assets/skirt2.jpg"></div>
+    <div class="work-card"><img src="./Assets/skirt3.jpg"></div>
+    <div class="work-card"><img src="./Assets/skirt4.jpg"></div>
+    <div class="work-card"><img src="./Assets/skirt5.jpg"></div>
+    <div class="work-card"><img src="./Assets/skirt6.jpg"></div>
+  </div>
+</section>
 
 <footer class="footer">
   <div class="footer-container">
@@ -298,19 +351,19 @@ Expertly tailored works informed by ageless structures and terrestrial palettes.
     <div>
       <h3>Jerry's Attire</h3>
       <p>
-       Everlasting style expertly designed, blending grace
-       with natural hues and contemporary forms.
+        Everlasting style expertly designed, blending grace
+        with natural hues and contemporary forms.
       </p>
     </div>
 
-    <div class="footer-links">
+    <div>
       <h4>Explore</h4>
       <a href="#">Shop All</a>
       <a href="#">New Arrivals</a>
       <a href="#">Our Collection</a>
     </div>
 
-    <div class="footer-links">
+    <div>
       <h4>Support</h4>
       <a href="#">Contact</a>
       <a href="#">Shipping</a>
@@ -323,13 +376,12 @@ Expertly tailored works informed by ageless structures and terrestrial palettes.
       <button>SUBSCRIBE</button>
     </div>
 
-  
     <div>
       <h4>Get in Touch</h4>
       <p>📍 Lahore, Pakistan</p>
       <a href="tel:+923054563175">📞 +92 305 4563175</a>
       <a href="mailto:javeriasharif145@gmail.com">javeriasharif145@gmail.com</a>
-      <a href="https://wa.me/923054563175" target="_blank"> WhatsApp</a>
+      <a href="https://wa.me/923054563175" target="_blank">WhatsApp</a>
       <a href="https://www.instagram.com/javeriasharif456" target="_blank">Instagram</a>
       <a href="https://www.snapchat.com/add/javeriashari_20" target="_blank">Snapchat</a>
     </div>
