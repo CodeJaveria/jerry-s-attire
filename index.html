@@ -64,8 +64,8 @@
   <div class="work-grid">
     <div class="work-card"><img src="./Assets/myskirt.png"></div>
     <div class="work-card"><img src="./Assets/myskirt2.jpeg"></div>
-    <div class="work-card"><img src="./Assets/skirt3.jpg"></div>
     <div class="work-card"><img src="./Assets/skirt4.jpg"></div>
+    <div class="work-card"><img src="./Assets/skirt3.jpg"></div>
     <div class="work-card"><img src="./Assets/skirt5.jpg"></div>
     <div class="work-card"><img src="./Assets/skirt6.jpg"></div>
   </div>
@@ -125,6 +125,11 @@
     const msg = document.getElementById("subscribeMsg");
     const email = emailInput.value.trim();
 
+    // Pehle koi purana timeout ho to clear ho jaye
+    if (msg.timeoutId) {
+      clearTimeout(msg.timeoutId);
+    }
+
     if (email === "") {
       msg.textContent = "Please enter your email.";
       msg.style.color = "red";
@@ -132,10 +137,16 @@
     } else {
       msg.textContent = "Thank you for subscribing!";
       msg.style.color = "#af6f43"; // caramel color
-      emailInput.value = ""; // input clear ho jaye
+      emailInput.value = "";
     }
+
+    // 🔥 3 seconds baad message remove
+    msg.timeoutId = setTimeout(() => {
+      msg.textContent = "";
+    }, 3000);
   }
 </script>
+
 
 
 </body>
