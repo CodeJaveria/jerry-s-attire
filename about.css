@@ -184,3 +184,8 @@ nav a:hover {
     grid-template-columns: 1fr;
   }
 }
+nav a.active {
+  color: var(--caramel);
+  border-bottom: 1px solid var(--caramel);
+  padding-bottom: 4px;
+}
