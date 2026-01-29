@@ -1,0 +1,186 @@
+:root {
+  --dark-bg: #2b1d16;
+  --caramel: #af6f43;
+  --off-white: #f9f4ef;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Libre Baskerville', serif;
+  background-color: var(--off-white);
+  color: var(--dark-bg);
+}
+
+/* ---------- HEADER ---------- */
+header {
+  background-color: var(--dark-bg);
+  padding: 18px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--caramel);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-image {
+  height: 55px;
+}
+
+.brand-name {
+  color: var(--off-white);
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  letter-spacing: 1.5px;
+}
+
+nav a {
+  color: var(--off-white);
+  text-decoration: none;
+  margin-left: 32px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--caramel);
+}
+
+/* ---------- HERO ---------- */
+.story-hero {
+  height: 60vh;
+  background:
+    linear-gradient(rgba(43,29,22,0.55), rgba(43,29,22,0.55)),
+    url('./Assets/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--off-white);
+}
+
+.story-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  margin-bottom: 10px;
+}
+
+.story-hero p {
+  font-size: 15px;
+  max-width: 450px;
+  line-height: 1.7;
+}
+
+/* ---------- STORY CONTENT ---------- */
+.story-content {
+  padding: 100px 90px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.story-image img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border: 1px solid rgba(175,111,67,0.4);
+}
+
+.story-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.story-text p {
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 18px;
+  color: #5a463b;
+}
+
+/* ---------- PHILOSOPHY ---------- */
+.story-philosophy {
+  background-color: #fff;
+  padding: 100px 90px;
+  text-align: center;
+}
+
+.story-philosophy h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  margin-bottom: 60px;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+.philosophy-card {
+  border: 1px solid rgba(175,111,67,0.35);
+  padding: 40px 30px;
+}
+
+.philosophy-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+.philosophy-card p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #5a463b;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  background-color: var(--dark-bg);
+  padding: 30px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 12px;
+  color: #c8bcb4;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  header {
+    padding: 15px 25px;
+  }
+
+  .story-content {
+    grid-template-columns: 1fr;
+    padding: 70px 35px;
+  }
+
+  .story-philosophy {
+    padding: 70px 35px;
+  }
+
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .story-hero h1 {
+    font-size: 40px;
+  }
+}
