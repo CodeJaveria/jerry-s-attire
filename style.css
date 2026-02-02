@@ -41,6 +41,17 @@ header {
   font-family: 'Playfair Display', serif;
   font-size: 24px;
   letter-spacing: 1.5px;
+  animation: fadeUp 1.4s ease forwards;
+}
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 nav a {
@@ -60,8 +71,8 @@ nav a:hover {
 .hero {
   height: 90vh;
   background:
-    linear-gradient(rgba(234, 116, 58, 0.5), rgba(43,29,22,0.45)),
-    url('./Assets/hero.jpg');
+    linear-gradient(rgba(243, 141, 111, 0.5), rgba(43,29,22,0.45)),
+    url('https://pixabay.com/images/download/paint-2985569_1920.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -274,3 +285,4 @@ nav a:hover {
   .footer { padding: 70px 35px 25px; }
   .footer-container { grid-template-columns: 1fr; }
 }
+
