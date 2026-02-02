@@ -42,17 +42,20 @@ header {
   font-size: 24px;
   letter-spacing: 1.5px;
   animation: fadeUp 1.4s ease forwards;
+  animation: letterReveal 1.2s ease forwards;
 }
-@keyframes fadeUp {
+
+@keyframes letterReveal {
   0% {
     opacity: 0;
-    transform: translateY(14px);
+    letter-spacing: 8px;
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    letter-spacing: 1.5px;
   }
 }
+
 
 nav a {
   color: var(--off-white);
@@ -274,6 +277,23 @@ nav a:hover {
   border-top: 1px solid rgba(175,111,67,0.4);
   padding-top: 25px;
 }
+.collection h2 {
+  opacity: 0;
+  transform: translateY(-40px) scale(1.25);
+}
+
+/* jab visible ho */
+.collection h2.show {
+  animation: zoomDrop 1.2s ease forwards;
+}
+
+@keyframes zoomDrop {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 
 @media (max-width: 900px) {
   header { padding: 15px 25px; }

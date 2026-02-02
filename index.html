@@ -150,9 +150,21 @@
       msg.textContent = "";
     }, 3000);
   }
+    const collectionHeading = document.querySelector('.collection h2');
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target); // sirf 1 dafa chale
+        }
+      });
+    },
+    { threshold: 0.4 }
+  );
+
+  observer.observe(collectionHeading);
 </script>
-
-
-
 </body>
 </html>
