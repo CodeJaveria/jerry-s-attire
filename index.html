@@ -70,8 +70,8 @@
     <div class="work-card"><img src="./Assets/skirt5.jpg"></div>
     <div class="work-card"><img src="./Assets/skirt6.jpg"></div>
     <div class="work-card"><img src="./Assets/skirt1.jpg"></div>
-<div class="work-card"><img src="./Assets/skirt7.jpg"></div>
-<div class="work-card"><img src="./Assets/modern.jpg"></div>
+    <div class="work-card"><img src="./Assets/skirt7.jpg"></div>
+    <div class="work-card"><img src="./Assets/modern.jpg"></div>
 
   </div>
 </section>
@@ -125,31 +125,47 @@
   </div>
 </footer>
 <script>
-  function subscribe() {
-    const emailInput = document.getElementById("newsletterEmail");
-    const msg = document.getElementById("subscribeMsg");
-    const email = emailInput.value.trim();
+ function subscribe() {
+  const emailInput = document.getElementById("newsletterEmail");
+  const msg = document.getElementById("subscribeMsg");
+  const email = emailInput.value.trim();
 
-    // Pehle koi purana timeout ho to clear ho jaye
-    if (msg.timeoutId) {
-      clearTimeout(msg.timeoutId);
-    }
-
-    if (email === "") {
-      msg.textContent = "Please enter your email.";
-      msg.style.color = "red";
-      emailInput.focus();
-    } else {
-      msg.textContent = "Thank you for subscribing!";
-      msg.style.color = "#af6f43"; // caramel color
-      emailInput.value = "";
-    }
-
-    // 🔥 3 seconds baad message remove
-    msg.timeoutId = setTimeout(() => {
-      msg.textContent = "";
-    }, 3000);
+  // Clear previous timeout if exists
+  if (msg.timeoutId) {
+    clearTimeout(msg.timeoutId);
   }
+
+  // Blank check
+  if (email === "") {
+    msg.textContent = "Please enter your email.";
+    msg.style.color = "red";
+    emailInput.focus();
+  } 
+  // Email format check
+  else if (!validateEmail(email)) {
+    msg.textContent = "Please enter a valid email.";
+    msg.style.color = "red";
+    emailInput.focus();
+  } 
+  // Success
+  else {
+    msg.textContent = "Thank you for subscribing!";
+    msg.style.color = "#af6f43"; // caramel color
+    emailInput.value = "";
+  }
+
+  // 3 seconds baad message remove
+  msg.timeoutId = setTimeout(() => {
+    msg.textContent = "";
+  }, 3000);
+}
+
+// Regex function to validate email
+function validateEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+}
+
     // Utility function to observe elements
   function scrollAnimate(selector) {
     const elements = document.querySelectorAll(selector);

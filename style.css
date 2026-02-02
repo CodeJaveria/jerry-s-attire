@@ -82,7 +82,13 @@ nav a:hover { color: var(--caramel); }
 /* ===== Collection ===== */
 .collection { padding:110px 90px; text-align:center; }
 .collection h2 { font-family:'Playfair Display', serif; font-size:40px; margin-bottom:12px; opacity:0; transform:translateY(-40px) scale(1.25); }
-.collection-subtitle { font-size:14px; max-width:520px; margin:0 auto 65px; line-height:1.8; color:#5a463b; opacity:0; transform:translateY(20px); }
+.collection-subtitle { font-size:14px;
+   max-width:520px; 
+   margin:0 auto 65px; 
+   line-height:1.8; 
+   color:#5a463b; 
+   opacity:0; 
+   transform:translateY(20px); }
 .collection-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:55px; }
 .collection-card {
   background-color:#fff;
