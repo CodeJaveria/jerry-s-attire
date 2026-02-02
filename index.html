@@ -150,21 +150,34 @@
       msg.textContent = "";
     }, 3000);
   }
-    const collectionHeading = document.querySelector('.collection h2');
+    // Utility function to observe elements
+  function scrollAnimate(selector) {
+    const elements = document.querySelectorAll(selector);
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.3 } // 30% visible triggers animation
+    );
+    elements.forEach(el => observer.observe(el));
+  }
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-          observer.unobserve(entry.target); // sirf 1 dafa chale
-        }
-      });
-    },
-    { threshold: 0.4 }
-  );
+  // Headings
+  scrollAnimate('.collection h2');
+  scrollAnimate('.our-work h2');
 
-  observer.observe(collectionHeading);
+  // Subtitles
+  scrollAnimate('.collection-subtitle');
+  scrollAnimate('.our-work-subtitle');
+
+  // Cards
+  scrollAnimate('.collection-card');
+  scrollAnimate('.work-card');
 </script>
 </body>
 </html>
