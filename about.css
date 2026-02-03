@@ -5,9 +5,9 @@
 }
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -16,7 +16,7 @@ body {
   color: var(--dark-bg);
 }
 
-/* ---------- HEADER ---------- */
+/* ===== HEADER ===== */
 header {
   background-color: var(--dark-bg);
   padding: 18px 60px;
@@ -49,23 +49,33 @@ nav a {
   margin-left: 32px;
   font-size: 14px;
   letter-spacing: 1px;
+  position: relative;
 }
 
 nav a:hover {
   color: var(--caramel);
 }
 
-nav a.active {
-  color: var(--caramel);
-  border-bottom: 1px solid var(--caramel);
-  padding-bottom: 4px;
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 1px;
+  background: var(--caramel);
+  transition: width 0.4s ease;
 }
 
-/* ---------- HERO ---------- */
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ===== HERO ===== */
 .about-hero {
   height: 60vh;
   background:
-    linear-gradient(rgba(234, 116, 58, 0.5), rgba(43,29,22,0.5)),
+    linear-gradient(rgba(234,116,58,0.5), rgba(43,29,22,0.5)),
     url('./Assets/hero.jpg');
   background-size: cover;
   background-position: center;
@@ -80,16 +90,30 @@ nav a.active {
 .about-hero h1 {
   font-family: 'Playfair Display', serif;
   font-size: 52px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroFadeUp 1.4s ease forwards;
 }
 
 .about-hero p {
-  font-size: 15px;
   max-width: 420px;
+  font-size: 15px;
   line-height: 1.7;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroFadeUp 1.4s ease forwards;
+  animation-delay: 0.4s;
 }
 
-/* ---------- CONTENT ---------- */
+@keyframes heroFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== CONTENT ===== */
 .about-content {
   padding: 100px 90px;
   display: grid;
@@ -102,6 +126,9 @@ nav a.active {
   font-family: 'Playfair Display', serif;
   font-size: 36px;
   margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all 1s ease;
 }
 
 .about-text p {
@@ -109,16 +136,21 @@ nav a.active {
   line-height: 1.9;
   margin-bottom: 18px;
   color: #5a463b;
+  opacity: 1; /* always visible */
+  transform: translateY(0);
 }
 
 .about-image img {
   width: 100%;
   height: 460px;
   object-fit: cover;
+  display: block;
   border: 1px solid rgba(175,111,67,0.4);
+  opacity: 1; /* always visible */
+  transform: translateY(0);
 }
 
-/* ---------- VALUES ---------- */
+/* ===== VALUES ===== */
 .about-values {
   background-color: #fff;
   padding: 100px 90px;
@@ -129,22 +161,33 @@ nav a.active {
   font-family: 'Playfair Display', serif;
   font-size: 38px;
   margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all 1s ease;
 }
 
 .values-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
+  align-items: stretch;
 }
 
 .value-card {
   border: 1px solid rgba(175,111,67,0.35);
   padding: 40px 30px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, opacity 1s ease;
+  opacity: 0;
+  transform: translateY(25px);
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.08);
 }
 
 .value-card h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 20px;
   margin-bottom: 14px;
 }
 
@@ -154,10 +197,9 @@ nav a.active {
   color: #5a463b;
 }
 
-/* ---------- FOOTER ---------- */
+/* ===== FOOTER ===== */
 .footer {
   background-color: var(--dark-bg);
-  color: var(--off-white);
   padding: 30px 0;
 }
 
@@ -167,36 +209,19 @@ nav a.active {
   color: #c8bcb4;
 }
 
-/* ---------- SAFE ANIMATIONS (NO LAYOUT SHIFT) ---------- */
-@keyframes textReveal {
-  from {
-    opacity: 0;
-    letter-spacing: 6px;
-  }
-  to {
-    opacity: 1;
-    letter-spacing: 1.5px;
-  }
+/* ===== SCROLL ANIMATION ===== */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all 1s ease;
 }
 
-@keyframes fadeText {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.scroll-animate.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.heading-animate {
-  animation: textReveal 1.2s ease forwards;
-}
-
-.text-animate {
-  animation: fadeText 1.4s ease forwards;
-}
-
-/* ---------- RESPONSIVE ---------- */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   header {
     padding: 15px 25px;
