@@ -112,14 +112,17 @@ nav a.active {
   font-family: 'Playfair Display', serif;
   font-size: 52px;
   margin-bottom: 12px;
-  animation: fadeUp 1s ease forwards;
+  /* animation: fadeUp 1s ease forwards; */
 }
 
 .story-hero p {
   font-size: 15px;
   max-width: 460px;
   line-height: 1.7;
-  animation: fadeUp 1.2s ease forwards;
+  /* animation: fadeUp 1.2s ease forwards; */
+}
+.story-hero .reveal {
+  transition-delay: 0.15s;
 }
 
 /* ---------- STORY CONTENT ---------- */
