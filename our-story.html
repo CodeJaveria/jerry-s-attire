@@ -57,11 +57,11 @@
   </div>
 </section>
 
-<section class="story-philosophy">
+<section class="story-philosophy reveal-on-scroll">
   <h2>Our Philosophy</h2>
 
   <div class="philosophy-grid">
-    <div class="philosophy-card">
+    <div class="philosophy-card reveal">
       <h3>Designed With Purpose</h3>
       <p>
         Each collection is thoughtfully crafted to reflect individuality
@@ -69,14 +69,14 @@
       </p>
     </div>
 
-    <div class="philosophy-card">
+    <div class="philosophy-card reveal">
       <h3>Inspired by Nature</h3>
       <p>
         Our color palettes are drawn from the earth — calm, warm, and enduring.
       </p>
     </div>
 
-    <div class="philosophy-card">
+    <div class="philosophy-card reveal">
       <h3>Made for Modern Women</h3>
       <p>
         We design for women who value comfort, confidence, and understated elegance.
@@ -90,6 +90,24 @@
     © 2026 Jerry's Attire. All Rights Reserved.
   </div>
 </footer>
+<script>
+  const reveals = document.querySelectorAll(".reveal");
 
+  function revealOnScroll() {
+    const windowHeight = window.innerHeight;
+    const revealPoint = 120;
+
+    reveals.forEach((el) => {
+      const elementTop = el.getBoundingClientRect().top;
+
+      if (elementTop < windowHeight - revealPoint) {
+        el.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll();
+</script>
 </body>
 </html>

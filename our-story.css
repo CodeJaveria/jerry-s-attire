@@ -167,7 +167,7 @@ nav a.active {
   font-family: 'Playfair Display', serif;
   font-size: 38px;
   margin-bottom: 60px;
-  animation: fadeUp 1s ease forwards;
+  /* animation: fadeUp 1s ease forwards; */
 }
 
 .philosophy-grid {
@@ -179,8 +179,8 @@ nav a.active {
 .philosophy-card {
   border: 1px solid rgba(175, 111, 67, 0.35);
   padding: 42px 32px;
-  opacity: 0;
-  animation: fadeUp 1s ease forwards;
+  /* opacity: 0;
+  animation: fadeUp 1s ease forwards; */
 }
 
 .philosophy-card:nth-child(1) { animation-delay: 0.2s; }
@@ -242,4 +242,15 @@ nav a.active {
   .story-hero h1 {
     font-size: 40px;
   }
+}
+/* ---------- SCROLL REVEAL ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
