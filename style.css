@@ -15,7 +15,7 @@ body {
   font-family: 'Libre Baskerville', serif;
   background-color: var(--off-white);
   color: var(--dark-bg);
-  overflow-x: hidden; /* Horizontal scroll prevent karne ke liye */
+  overflow-x: hidden;
 }
 
 /* ===== Header ===== */
@@ -99,7 +99,7 @@ nav a:hover { color: var(--caramel); }
   text-align: center; 
 }
 
-/* Initial States for Scroll Animations (Har dafa repeat hone k liye) */
+/* --- ANIMATION TIME SLOWED DOWN TO 1.8s --- */
 .collection h2, 
 .our-work h2,
 .collection-subtitle,
@@ -107,7 +107,8 @@ nav a:hover { color: var(--caramel); }
 .collection-card,
 .work-card {
   opacity: 0;
-  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* Time yahan se slow kiya gaya hai */
+  transition: all 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* Headings Initial State */
