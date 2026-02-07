@@ -4,7 +4,7 @@
   --off-white: #f9f4ef;
 }
 
-/* ===== Basic Reset ===== */
+
 * { 
   box-sizing: border-box; 
   margin: 0; 
@@ -18,7 +18,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ===== Header ===== */
+
 header {
   background-color: var(--dark-bg);
   padding: 18px 60px;
@@ -56,7 +56,7 @@ nav a {
 }
 nav a:hover { color: var(--caramel); }
 
-/* ===== Hero Section ===== */
+
 .hero {
   height: 90vh;
   background:
@@ -93,13 +93,13 @@ nav a:hover { color: var(--caramel); }
 }
 .btn:hover { background-color:var(--caramel); transform:translateY(-2px); }
 
-/* ===== Sections General Styling ===== */
+
 .collection, .our-work { 
   padding: 110px 90px; 
   text-align: center; 
 }
 
-/* --- ANIMATION TIME SLOWED DOWN TO 1.8s --- */
+
 .collection h2, 
 .our-work h2,
 .collection-subtitle,
@@ -107,11 +107,11 @@ nav a:hover { color: var(--caramel); }
 .collection-card,
 .work-card {
   opacity: 0;
-  /* Time yahan se slow kiya gaya hai */
+
   transition: all 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Headings Initial State */
+
 .collection h2, .our-work h2 {
   font-family: 'Playfair Display', serif;
   font-size: 40px;
@@ -119,7 +119,7 @@ nav a:hover { color: var(--caramel); }
   transform: translateY(-30px) scale(0.95);
 }
 
-/* Subtitles Initial State */
+
 .collection-subtitle, .our-work-subtitle {
   font-size: 14px;
   max-width: 520px;
@@ -129,7 +129,7 @@ nav a:hover { color: var(--caramel); }
   transform: translateY(20px);
 }
 
-/* Show States (Triggered by JS) */
+
 .show {
   opacity: 1 !important;
   transform: translate(0) scale(1) !important;
