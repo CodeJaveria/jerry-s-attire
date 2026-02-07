@@ -16,7 +16,7 @@ body {
   color: var(--dark-bg);
 }
 
-/* ===== HEADER ===== */
+
 header {
   background-color: var(--dark-bg);
   padding: 18px 60px;
@@ -71,7 +71,7 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* ===== HERO ===== */
+
 .about-hero {
   height: 60vh;
   background:
@@ -113,7 +113,7 @@ nav a:hover::after {
   }
 }
 
-/* ===== CONTENT ===== */
+
 .about-content {
   padding: 100px 90px;
   display: grid;
