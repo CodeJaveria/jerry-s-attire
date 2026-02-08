@@ -112,20 +112,20 @@ nav a.active {
   font-family: 'Playfair Display', serif;
   font-size: 52px;
   margin-bottom: 12px;
-  /* animation: fadeUp 1s ease forwards; */
+ 
 }
 
 .story-hero p {
   font-size: 15px;
   max-width: 460px;
   line-height: 1.7;
-  /* animation: fadeUp 1.2s ease forwards; */
+ 
 }
 .story-hero .reveal {
   transition-delay: 0.15s;
 }
 
-/* ---------- STORY CONTENT ---------- */
+
 .story-content {
   padding: 100px 90px;
   display: grid;
@@ -159,7 +159,7 @@ nav a.active {
   color: #5a463b;
 }
 
-/* ---------- PHILOSOPHY ---------- */
+
 .story-philosophy {
   background-color: #ffffff;
   padding: 100px 90px;
@@ -170,7 +170,7 @@ nav a.active {
   font-family: 'Playfair Display', serif;
   font-size: 38px;
   margin-bottom: 60px;
-  /* animation: fadeUp 1s ease forwards; */
+ 
 }
 
 .philosophy-grid {
@@ -182,8 +182,7 @@ nav a.active {
 .philosophy-card {
   border: 1px solid rgba(175, 111, 67, 0.35);
   padding: 42px 32px;
-  /* opacity: 0;
-  animation: fadeUp 1s ease forwards; */
+  
 }
 
 .philosophy-card:nth-child(1) { animation-delay: 0.2s; }
@@ -206,7 +205,7 @@ nav a.active {
   color: #5a463b;
 }
 
-/* ---------- FOOTER ---------- */
+
 .footer {
   background-color: var(--dark-bg);
   padding: 30px 0;
@@ -219,7 +218,7 @@ nav a.active {
   letter-spacing: 0.5px;
 }
 
-/* ---------- RESPONSIVE ---------- */
+
 @media (max-width: 900px) {
   header {
     padding: 15px 25px;
@@ -247,7 +246,7 @@ nav a.active {
   }
 }
 
-/* ---------- SCROLL REVEAL (IMPROVED) ---------- */
+
 .reveal {
   opacity: 0;
   transform: translateY(40px);

@@ -180,7 +180,7 @@ nav a:hover { color: var(--caramel); }
 
 .work-card:hover img { transform: scale(1.1); }
 
-/* ===== Footer ===== */
+
 .footer { 
   background-color: var(--dark-bg); 
   color: var(--off-white); 
@@ -227,7 +227,7 @@ nav a:hover { color: var(--caramel); }
   margin-top: 40px;
 }
 
-/* ===== Media Queries ===== */
+
 @media (max-width: 900px) {
   header { padding: 15px 25px; }
   nav a { margin-left: 18px; }
