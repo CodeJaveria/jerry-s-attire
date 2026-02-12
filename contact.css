@@ -62,7 +62,7 @@ nav a.active {
 .contact-hero {
   height: 55vh;
   background:
-    linear-gradient(rgba(234, 116, 58, 0.5), rgba(43,29,22,0.55)),
+    linear-gradient(rgba(11, 23, 59, 0.897), rgba(43,29,22,0.55)),
     url('./Assets/hero.jpg');
   background-size: cover;
   background-position: center;
