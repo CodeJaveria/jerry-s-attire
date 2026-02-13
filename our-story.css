@@ -14,40 +14,7 @@ body {
   font-family: 'Libre Baskerville', serif;
   background-color: var(--off-white);
   color: var(--dark-bg);
-}
-
-/* ---------- ANIMATIONS ---------- */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeRight {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes zoomSoft {
-  from {
-    opacity: 0;
-    transform: scale(1.05);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  overflow-x: hidden;
 }
 
 /* ---------- HEADER ---------- */
@@ -58,24 +25,14 @@ header {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--caramel);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.logo-image {
-  height: 55px;
-}
-
-.brand-name {
-  color: var(--off-white);
-  font-family: 'Playfair Display', serif;
-  font-size: 24px;
-  letter-spacing: 1.5px;
-}
+.logo-container { display: flex; align-items: center; gap: 12px; }
+.logo-image { height: 55px; }
+.brand-name { color: var(--off-white); font-family: 'Playfair Display', serif; font-size: 24px; letter-spacing: 1.5px; }
 
 nav a {
   color: var(--off-white);
@@ -83,24 +40,20 @@ nav a {
   margin-left: 32px;
   font-size: 14px;
   letter-spacing: 1px;
+  position: relative;
   transition: color 0.3s ease;
 }
 
-nav a:hover,
-nav a.active {
-  color: var(--caramel);
-}
+nav a.active, nav a:hover { color: var(--caramel); }
 
 /* ---------- HERO ---------- */
 .story-hero {
-  height: 60vh;
-  background:
-     linear-gradient(rgba(234,116,58,0.5), rgba(43,29,22,0.5)),
-    url('./Assets/hero.jpg');
+  height: 65vh;
+  background: linear-gradient(rgba(234,116,58,0.5), rgba(43,29,22,0.5)), url('./Assets/hero.jpg');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -108,152 +61,85 @@ nav a.active {
   padding: 0 20px;
 }
 
-.story-hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 52px;
-  margin-bottom: 12px;
- 
-}
+.story-hero h1 { font-family: 'Playfair Display', serif; font-size: 60px; margin-bottom: 15px; }
+.story-hero p { font-size: 16px; max-width: 500px; line-height: 1.8; }
 
-.story-hero p {
-  font-size: 15px;
-  max-width: 460px;
-  line-height: 1.7;
- 
-}
-.story-hero .reveal {
-  transition-delay: 0.15s;
-}
-
-
+/* ---------- CONTENT SECTION ---------- */
 .story-content {
   padding: 100px 90px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 70px;
+  gap: 80px;
   align-items: center;
 }
 
 .story-image img {
   width: 100%;
-  height: 480px;
+  height: 520px;
   object-fit: cover;
-  border: 1px solid rgba(175, 111, 67, 0.4);
-  animation: zoomSoft 1.2s ease forwards;
+  border: 1px solid var(--caramel);
+  /* A subtle inner glow effect instead of hard lines */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
-.story-text {
-  animation: fadeRight 1.2s ease forwards;
-}
+.story-text h2 { font-family: 'Playfair Display', serif; font-size: 42px; margin-bottom: 30px; }
+.story-text p { font-size: 15px; line-height: 2; margin-bottom: 22px; color: var(--dark-bg); }
 
-.story-text h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 36px;
-  margin-bottom: 22px;
-}
-
-.story-text p {
-  font-size: 14px;
-  line-height: 1.9;
-  margin-bottom: 18px;
-  color: #5a463b;
-}
-
-
+/* ---------- PHILOSOPHY ---------- */
 .story-philosophy {
-  background-color: #ffffff;
   padding: 100px 90px;
   text-align: center;
+  background-color: var(--off-white);
 }
 
-.story-philosophy h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 38px;
-  margin-bottom: 60px;
- 
-}
+.story-philosophy h2 { font-family: 'Playfair Display', serif; font-size: 42px; margin-bottom: 70px; }
 
 .philosophy-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
+  gap: 40px;
 }
 
 .philosophy-card {
-  border: 1px solid rgba(175, 111, 67, 0.35);
-  padding: 42px 32px;
-  
+  border: 1px solid rgba(175, 111, 67, 0.25);
+  padding: 60px 40px;
+  background-color: transparent;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
-.philosophy-card:nth-child(1) { animation-delay: 0.2s; }
-.philosophy-card:nth-child(2) { animation-delay: 0.4s; }
-.philosophy-card:nth-child(3) { animation-delay: 0.6s; }
 
 .philosophy-card:hover {
-  transform: translateY(-6px);
-}
-
-.philosophy-card h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
-  margin-bottom: 14px;
-}
-
-.philosophy-card p {
-  font-size: 14px;
-  line-height: 1.8;
-  color: #5a463b;
-}
-
-
-.footer {
   background-color: var(--dark-bg);
-  padding: 30px 0;
+  color: var(--off-white);
+  transform: translateY(-15px);
+  border-color: var(--dark-bg);
+  box-shadow: 0 20px 50px rgba(43, 29, 22, 0.2);
 }
 
-.footer-bottom {
-  text-align: center;
-  font-size: 12px;
-  color: #c8bcb4;
-  letter-spacing: 0.5px;
-}
+.philosophy-card h3 { font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 20px; }
+.philosophy-card p { font-size: 14px; line-height: 1.8; opacity: 0.9; }
 
+/* ---------- FOOTER ---------- */
+.footer { background-color: var(--dark-bg); padding: 50px 0; }
+.footer-bottom { text-align: center; font-size: 12px; color: #c8bcb4; letter-spacing: 1px; }
 
-@media (max-width: 900px) {
-  header {
-    padding: 15px 25px;
-  }
-
-  nav a {
-    margin-left: 18px;
-  }
-
-  .story-content {
-    grid-template-columns: 1fr;
-    padding: 70px 35px;
-  }
-
-  .story-philosophy {
-    padding: 70px 35px;
-  }
-
-  .philosophy-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .story-hero h1 {
-    font-size: 40px;
-  }
-}
-
-
+/* ---------- REVEAL ANIMATIONS ---------- */
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(30px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
 }
 
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.3s; }
+.delay-3 { transition-delay: 0.5s; }
+
+@media (max-width: 900px) {
+  .story-content, .story-philosophy { padding: 80px 30px; }
+  .story-content, .philosophy-grid { grid-template-columns: 1fr; }
+  .story-hero h1 { font-size: 44px; }
 }

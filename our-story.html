@@ -3,16 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Our Story | Jerry's Attire</title>
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Libre+Baskerville:wght@400&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="our-story.css">
 </head>
-
 <body>
 
 <header>
@@ -20,7 +14,6 @@
     <img src="./Assets/Logo.png" class="logo-image" alt="Jerry's Attire Logo">
     <div class="brand-name">Jerry's Attire</div>
   </div>
-
   <nav>
     <a href="./index.html">Home</a>
     <a href="./about.html">About</a>
@@ -30,25 +23,25 @@
 </header>
 
 <section class="story-hero">
-  <h1 class="reveal">Our Story</h1>
-  <p class="reveal">
-    A journey shaped by elegance, intention, beauty and timeless design.
-  </p>
+  <div class="hero-content reveal">
+    <h1>Our Story</h1>
+    <p>Amazing quality products,
+       Couldn't find anywhere,
+     So created my own for you</p>
+  </div>
 </section>
 
 <section class="story-content">
-  <div class="story-image">
+  <div class="story-image reveal">
     <img src="./Assets/skirt3.jpg" alt="Our Story Image">
   </div>
-
-  <div class="story-text">
-    <h2>Where It All Began....</h2>
+  <div class="story-text reveal">
+    <h2>Where It All Began...</h2>
     <p>
       Jerry's Attire was born from a simple belief — fashion should feel
       effortless yet meaningful. Inspired by earthy tones, flowing forms,
       and modern femininity, we set out to create pieces that feel personal.
     </p>
-
     <p>
       Every skirt tells a story of balance: tradition meeting contemporary
       aesthetics, comfort embracing confidence, and subtle luxury defining
@@ -57,58 +50,39 @@
   </div>
 </section>
 
-<section class="story-philosophy reveal-on-scroll">
-  <h2>Our Philosophy</h2>
-
+<section class="story-philosophy">
+  <h2 class="reveal">Our Philosophy</h2>
   <div class="philosophy-grid">
-    <div class="philosophy-card reveal">
+    <div class="philosophy-card reveal delay-1">
       <h3>Designed With Purpose</h3>
-      <p>
-        Each collection is thoughtfully crafted to reflect individuality
-        while remaining timeless.
-      </p>
+      <p>Each collection is thoughtfully crafted to reflect individuality while remaining timeless.</p>
     </div>
-
-    <div class="philosophy-card reveal">
+    <div class="philosophy-card reveal delay-2">
       <h3>Inspired by Nature</h3>
-      <p>
-        Our color palettes are drawn from the earth — calm, warm, and enduring.
-      </p>
+      <p>Our color palettes are drawn from the earth — calm, warm, and enduring.</p>
     </div>
-
-    <div class="philosophy-card reveal">
+    <div class="philosophy-card reveal delay-3">
       <h3>Made for Modern Women</h3>
-      <p>
-        We design for women who value comfort, confidence, and understated elegance.
-      </p>
+      <p>We design for women who value comfort, confidence, and understated elegance.</p>
     </div>
   </div>
 </section>
 
 <footer class="footer">
-  <div class="footer-bottom">
-    © 2026 Jerry's Attire. All Rights Reserved.
-  </div>
+  <div class="footer-bottom">© 2026 Jerry's Attire. All Rights Reserved.</div>
 </footer>
+
 <script>
-  const revealElements = document.querySelectorAll(".reveal");
+  const observerOptions = { threshold: 0.15 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  }, observerOptions);
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("active");
-        } else {
-          entry.target.classList.remove("active");
-        }
-      });
-    },
-    {
-      threshold: 0.2
-    }
-  );
-
-  revealElements.forEach((el) => observer.observe(el));
+  document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 </script>
 </body>
 </html>
