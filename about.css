@@ -159,25 +159,46 @@ nav a.active::after, nav a:hover::after { width: 100%; }
   padding: 100px 90px;
   text-align: center;
   background-color: var(--off-white);
+  
 }
 
 .values-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
+  margin-top: 30px;
 }
 
+/* --- Values Grid (Updated with Radius and Shadow) --- */
 .value-card {
+  /* Using your exact caramel color for the border */
   border: 1px solid rgba(175, 111, 67, 0.3);
   padding: 45px 30px;
-  transition: all 0.4s ease;
-  background-color: transparent; /* Keeping it earthy */
+  background-color: transparent;
+  
+  /* Added Border Radius for a modern feel */
+  border-radius: 12px;
+  
+  /* Added subtle Caramel shadow to match Our Story cards */
+  box-shadow: 0 10px 30px rgba(175, 111, 67, 0.1);
+  
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .value-card:hover {
+  /* Color flip to your Dark BG */
   background-color: var(--dark-bg);
   color: var(--off-white);
-  transform: translateY(-8px);
+  
+  /* Lift effect */
+  transform: translateY(-12px);
+  
+  /* Deeper shadow on hover for depth */
+  box-shadow: 0 20px 50px rgba(43, 29, 22, 0.25);
+  
+  /* Keeping radius consistent */
+  border-radius: 12px;
+  border-color: var(--dark-bg);
 }
 
 .value-card h3 {
