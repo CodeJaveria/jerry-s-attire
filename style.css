@@ -26,8 +26,11 @@ header {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--caramel);
-  position: relative;
-  z-index: 100;
+  
+  /* Ye 3 lines add karein */
+  position: sticky;
+  top: 0;
+  z-index: 1000; 
 }
 
 .logo-container { display: flex; align-items: center; gap: 12px; }
