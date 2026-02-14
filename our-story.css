@@ -40,11 +40,34 @@ nav a {
   margin-left: 32px;
   font-size: 14px;
   letter-spacing: 1px;
-  position: relative;
+  position: relative; /* Line ko align karne ke liye zaruri hai */
+  padding-bottom: 6px; /* Mouse hover area barhane ke liye */
   transition: color 0.3s ease;
 }
 
-nav a.active, nav a:hover { color: var(--caramel); }
+/* Hover aur Active state ka color */
+nav a:hover,
+nav a.active {
+  color: var(--caramel);
+}
+
+/* Underline ka base style */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;       /* Line ko link ke bilkul niche chipkane ke liye */
+  width: 0;        /* Shuru mein line ki width zero hogi */
+  height: 1px;     /* Line ki thickness */
+  background: var(--caramel);
+  transition: width 0.4s ease; /* Sliding effect ki speed */
+}
+
+/* Hover karne par ya Active page par line ko dikhana */
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;    /* Line poori length tak slide karegi */
+}
 
 /* ---------- HERO ---------- */
 .story-hero {
