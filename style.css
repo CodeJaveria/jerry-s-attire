@@ -266,3 +266,90 @@ nav a.active::after {
   .footer { padding: 60px 25px 25px; }
   .footer-container { grid-template-columns: 1fr; gap: 40px; }
 }
+.editorial-preview {
+  padding: 120px 90px;
+  background-color: var(--off-white);
+}
+
+.editorial-container {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.editorial-image {
+  flex: 1;
+  position: relative;
+}
+
+.editorial-image img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  border-radius: 4px;
+}
+
+/* Ye caramel box image ke peeche banta hai styling ke liye */
+.image-overlay-box {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 70%;
+  height: 70%;
+  border: 2px solid var(--caramel);
+  z-index: 1;
+}
+
+.editorial-content {
+  flex: 1;
+}
+
+.editorial-tag {
+  color: var(--caramel);
+  font-size: 12px;
+  letter-spacing: 3px;
+  display: block;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.editorial-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  color: var(--dark-bg);
+}
+
+.editorial-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #5a463b;
+  margin-bottom: 40px;
+}
+
+.editorial-link {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: var(--dark-bg);
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px solid var(--caramel);
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.editorial-link:hover {
+  color: var(--caramel);
+  letter-spacing: 3px;
+}
+
+/* Responsive adjustment */
+@media (max-width: 900px) {
+  .editorial-container { flex-direction: column; gap: 50px; }
+  .editorial-content h2 { font-size: 36px; }
+}
