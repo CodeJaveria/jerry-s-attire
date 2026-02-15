@@ -87,7 +87,7 @@ nav a.active::after {
 
 .hero {
   height: 90vh;
-  /* Aapka background aur gradient */
+
   background: linear-gradient(rgba(234,116,58,0.5), rgba(43,29,22,0.5)),
               url('https://pixabay.com/images/download/paint-2985569_1920.jpg');
   background-size: cover;
@@ -120,7 +120,7 @@ nav a.active::after {
   line-height: 1.7; 
 }
 
-/* --- Floating Images Container --- */
+
 .hero-floating-collection {
   flex: 1;
   position: relative;
