@@ -88,12 +88,9 @@
 </section>
 
 <footer class="footer">
-  <div class="footer-bottom">
-    © 2026 Jerry's Attire. All Rights Reserved.
-  </div>
-</footer>
-<footer class="footer">
+  <footer class="footer">
   <div class="footer-container">
+
     <div>
       <h3>Jerry's Attire</h3>
       <p>
@@ -104,39 +101,92 @@
 
     <div>
       <h4>Explore</h4>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="our-story.html">Our Story</a>
+      <a href="#">Shop All</a>
+      <a href="#">New Arrivals</a>
+      <a href="#">Our Collection</a>
     </div>
 
     <div>
       <h4>Support</h4>
-      <a href="contact.html">Contact</a>
+      <a href="#">Contact</a>
       <a href="#">Shipping</a>
       <a href="#">Privacy Policy</a>
     </div>
 
     <div class="footer-newsletter">
-      <h4>Join Our World!</h4>
-      <input type="email" id="newsletterEmail" placeholder="Your email address">
-      <button onclick="subscribe()">SUBSCRIBE</button>
-      <p id="subscribeMsg" style="margin-top:8px; font-size:13px;"></p>
-    </div>
+  <h4>Join Our World!</h4>
+  <input type="email" id="newsletterEmail" placeholder="Your email address">
+  <button onclick="subscribe()">SUBSCRIBE</button>
+  <p id="subscribeMsg" style="margin-top:8px; font-size:13px;"></p>
+</div>
 
     <div>
       <h4>Get in Touch</h4>
       <p>📍 Lahore, Pakistan</p>
-      <a href="tel:+923054563175">📞 +92 305 4563175</a>
+      <a href="tel:+923054563175">📞 +92 305 0000000</a>
+      <a href="mailto:javeriasharif145@gmail.com">javeriasharif145@gmail.com</a>
       <a href="https://wa.me/923054563175" target="_blank">WhatsApp</a>
       <a href="https://www.instagram.com/javeriasharif456" target="_blank">Instagram</a>
+      <a href="https://www.snapchat.com/add/javeria_shari20" target="_blank">Snapchat</a>
     </div>
+
   </div>
 
   <div class="footer-bottom">
     © 2026 Jerry's Attire. All Rights Reserved.
   </div>
 </footer>
+<script>
+function subscribe() {
+  const emailInput = document.getElementById("newsletterEmail");
+  const msg = document.getElementById("subscribeMsg");
+  const email = emailInput.value.trim();
 
+  if (msg.timeoutId) clearTimeout(msg.timeoutId);
+
+  if (email === "") {
+    msg.textContent = "Please enter your email.";
+    msg.style.color = "red";
+    emailInput.focus();
+  } else if (!validateEmail(email)) {
+    msg.textContent = "Please enter a valid email.";
+    msg.style.color = "red";
+    emailInput.focus();
+  } else {
+    msg.textContent = "Thank you for subscribing!";
+    msg.style.color = "#af6f43";
+    emailInput.value = "";
+  }
+
+  msg.timeoutId = setTimeout(() => { msg.textContent = ""; }, 3000);
+}
+
+function validateEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+}
+
+function scrollAnimate(selector) {
+  const elements = document.querySelectorAll(selector);
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        } else {
+          // Is line ki wajah se har dafa scroll par animation wapis aayegi
+          entry.target.classList.remove('show'); 
+        }
+      });
+    },
+    { threshold: 0.1 } // Thoda sa b nazar aaye to trigger ho jaye
+  );
+  elements.forEach(el => observer.observe(el));
+}
+
+// Saari headings aur cards par apply karein
+scrollAnimate('.collection h2, .our-work h2, .collection-subtitle, .our-work-subtitle, .collection-card, .work-card');
+</script>
 <script src="about.js"></script>
 </body>
 </html>
