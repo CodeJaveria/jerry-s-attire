@@ -251,3 +251,24 @@ nav a.active::after {
 @media (max-width: 900px) {
   .about-content, .values-grid, .about-stats { grid-template-columns: 1fr; padding: 60px 30px; }
 }
+.footer { 
+  background-color: var(--dark-bg); 
+  color: var(--off-white); 
+  padding: 90px 80px 30px; 
+  border-top: 1px solid var(--caramel); 
+}
+
+.footer-container { 
+  display: grid; 
+  grid-template-columns: 2fr 1fr 1fr 2fr 2fr; 
+  gap: 60px; 
+}
+
+/* Mobile Responsive Footer */
+@media (max-width: 900px) {
+  .footer-container { 
+    grid-template-columns: 1fr; 
+    gap: 40px; 
+    text-align: center;
+  }
+}
