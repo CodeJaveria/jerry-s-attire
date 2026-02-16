@@ -103,7 +103,7 @@ nav a.active::after {
 
 /* --- Content Layout --- */
 .about-content {
-  padding: 100px 90px;
+  padding: 110px 90px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 70px;
@@ -256,7 +256,7 @@ nav a.active::after {
 .footer { 
   background-color: var(--dark-bg); 
   color: var(--off-white); 
-  padding: 40px 50px 30px; 
+ padding: 90px 80px 30px;
   /* border-top: 1px solid var(--caramel);  */
 }
 
