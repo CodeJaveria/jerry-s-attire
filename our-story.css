@@ -69,7 +69,7 @@ nav a.active::after {
   width: 100%;    /* Line poori length tak slide karegi */
 }
 
-/* ---------- HERO ---------- */
+
 .story-hero {
   height: 65vh;
   background: linear-gradient(rgba(234,116,58,0.5), rgba(43,29,22,0.5)), url('./Assets/hero.jpg');
@@ -87,7 +87,7 @@ nav a.active::after {
 .story-hero h1 { font-family: 'Playfair Display', serif; font-size: 60px; margin-bottom: 15px; }
 .story-hero p { font-size: 16px; max-width: 500px; line-height: 1.8; }
 
-/* ---------- CONTENT SECTION ---------- */
+
 .story-content {
   padding: 110px 90px;
   display: grid;
@@ -101,7 +101,7 @@ nav a.active::after {
   height: 520px;
   object-fit: cover;
   border: 1px solid var(--caramel);
-  /* A subtle inner glow effect instead of hard lines */
+
   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
