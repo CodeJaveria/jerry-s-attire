@@ -65,7 +65,7 @@ nav a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;       /* Line ko link ke bilkul niche chipkane ke liye */
+  bottom: 0;      
   width: 0;        /* Shuru mein line ki width zero hogi */
   height: 1px;     /* Line ki thickness */
   background: var(--caramel);
