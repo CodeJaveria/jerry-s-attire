@@ -17,7 +17,7 @@ body {
   overflow-x: hidden;
 }
 
-/* --- Header & Navigation --- */
+
 header {
   background-color: var(--dark-bg);
   padding: 18px 60px;
