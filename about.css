@@ -62,7 +62,7 @@ nav a.active {
   color: var(--caramel);
 }
 
-/* Underline ka base style */
+
 nav a::after {
   content: "";
   position: absolute;

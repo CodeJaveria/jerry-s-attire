@@ -253,7 +253,7 @@ nav a.active::after {
   transform: translate(0) scale(1) !important;
 }
 
-/* ===== Grids ===== */
+
 .collection-grid { 
   display: grid; 
   grid-template-columns: repeat(3, 1fr); 
