@@ -74,13 +74,13 @@ nav a::after {
   transition: width 0.4s ease; /* Sliding effect ki speed */
 }
 
-/* Hover karne par ya Active page par line ko dikhana */
+
 nav a:hover::after,
 nav a.active::after {
-  width: 100%;    /* Line poori length tak slide karegi */
+  width: 100%;  
 }
 
-/* --- Hero Section --- */
+
 .about-hero {
   height: 65vh;
   background: linear-gradient(rgba(234,116,58,0.5), rgba(43,29,22,0.5)),
