@@ -141,7 +141,7 @@ nav a.active::after {
   transform: scale(1);
 }
 
-/* --- Advanced Stats --- */
+
 .about-stats {
   background-color: var(--caramel);
   color: var(--off-white);
