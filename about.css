@@ -163,7 +163,7 @@ nav a.active::after {
   letter-spacing: 2px;
 }
 
-/* --- Values Grid (Strictly using your palette) --- */
+
 .about-values {
   padding: 100px 90px;
   text-align: center;
@@ -178,7 +178,7 @@ nav a.active::after {
   margin-top: 30px;
 }
 
-/* --- Values Grid (Updated with Radius and Shadow) --- */
+
 .value-card {
   /* Using your exact caramel color for the border */
   border: 1px solid rgba(175, 111, 67, 0.3);
