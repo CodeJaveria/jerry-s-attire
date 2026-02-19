@@ -180,15 +180,15 @@ nav a.active::after {
 
 
 .value-card {
-  /* Using your exact caramel color for the border */
+ 
   border: 1px solid rgba(175, 111, 67, 0.3);
   padding: 45px 30px;
   background-color: transparent;
   
-  /* Added Border Radius for a modern feel */
+  
   border-radius: 12px;
   
-  /* Added subtle Caramel shadow to match Our Story cards */
+  
   box-shadow: 0 10px 30px rgba(175, 111, 67, 0.1);
   
   transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
