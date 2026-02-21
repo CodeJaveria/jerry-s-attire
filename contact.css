@@ -49,8 +49,8 @@ nav a {
   margin-left: 32px;
   font-size: 14px;
   letter-spacing: 1px;
-  position: relative; /* Line ko align karne ke liye zaruri hai */
-  padding-bottom: 6px; /* Mouse hover area barhane ke liye */
+  position: relative; 
+  padding-bottom: 6px; 
   transition: color 0.3s ease;
 }
 
