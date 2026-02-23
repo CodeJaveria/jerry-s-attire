@@ -54,20 +54,20 @@ nav a {
   transition: color 0.3s ease;
 }
 
-/* Hover aur Active state ka color */
+
 nav a:hover,
 nav a.active {
   color: var(--caramel);
 }
 
-/* Underline ka base style */
+
 nav a::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;      
-  width: 0;        /* Shuru mein line ki width zero hogi */
-  height: 1px;     /* Line ki thickness */
+  width: 0;       
+  height: 1px;   
   background: var(--caramel);
   transition: width 0.4s ease; /* Sliding effect ki speed */
 }
