@@ -66,8 +66,8 @@ nav a::after {
   position: absolute;
   left: 0;
   bottom: 0;      
-  width: 0;        /* Shuru mein line ki width zero hogi */
-  height: 1px;     /* Line ki thickness */
+  width: 0;       
+  height: 1px;   
   background: var(--caramel);
   transition: width 0.4s ease; /* Sliding effect ki speed */
 }
