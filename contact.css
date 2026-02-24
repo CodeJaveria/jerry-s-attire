@@ -75,7 +75,7 @@ nav a::after {
 
 nav a:hover::after,
 nav a.active::after {
-  width: 100%;    /* Line poori length tak slide karegi */
+  width: 100%;    
 }
 
 .contact-hero {
