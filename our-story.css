@@ -176,9 +176,7 @@ nav a.active::after {
   .story-content, .philosophy-grid { grid-template-columns: 1fr; }
   .story-hero h1 { font-size: 44px; }
 }
-/* ==========================================
-   FOOTER SECTION 
-   ========================================== */
+
 
 .footer { 
   background-color: var(--dark-bg); 
