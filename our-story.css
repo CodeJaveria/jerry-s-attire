@@ -256,6 +256,6 @@ nav a.active::after {
   .footer-container { 
     grid-template-columns: 1fr; 
     gap: 40px; 
-    text-align: center; /* Mobile par center alignment achi lagti hai */
+    text-align: center; 
   }
 }
