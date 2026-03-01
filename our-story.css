@@ -130,7 +130,7 @@ nav a.active::after {
   background-color: transparent;
   border-radius: 12px; 
   
-  /* Creating a subtle Caramel shadow */
+ 
   box-shadow: 0 10px 30px rgba(175, 111, 67, 0.1); 
   
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
