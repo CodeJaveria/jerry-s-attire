@@ -137,7 +137,6 @@ nav a.active::after {
 }
 
 .philosophy-card:hover {
-  /* Color flip stays, but we keep the radius and deepen the shadow */
   background-color: var(--dark-bg);
   color: var(--off-white);
   transform: translateY(-15px);
