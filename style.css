@@ -383,7 +383,6 @@ nav a.active::after {
   border-radius: 4px;
 }
 
-/* Ye caramel box image ke peeche banta hai styling ke liye */
 .image-overlay-box {
   position: absolute;
   top: -30px;
