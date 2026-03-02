@@ -436,8 +436,6 @@ nav a.active::after {
   color: var(--caramel);
   letter-spacing: 3px;
 }
-
-/* Responsive adjustment */
 @media (max-width: 900px) {
   .editorial-container { flex-direction: column; gap: 50px; }
   .editorial-content h2 { font-size: 36px; }
