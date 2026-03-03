@@ -60,8 +60,7 @@ nav a {
   transition: color 0.3s ease;
 }
 
-/* Hover aur Active state ka color */
-nav a:hover,
+
 nav a.active {
   color: var(--caramel);
 }
