@@ -56,7 +56,7 @@ nav a {
   font-size: 14px;
   letter-spacing: 1px;
   position: relative; 
-  padding-bottom: 6px; /* Mouse hover area barhane ke liye */
+  padding-bottom: 6px; 
   transition: color 0.3s ease;
 }
 
