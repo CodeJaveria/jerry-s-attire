@@ -77,7 +77,7 @@ nav a::after {
   transition: width 0.4s ease; 
 }
 
-/* Hover karne par ya Active page par line ko dikhana */
+
 nav a:hover::after,
 nav a.active::after {
   width: 100%;    /* Line poori length tak slide karegi */
