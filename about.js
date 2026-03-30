@@ -13,5 +13,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const elements = document.querySelectorAll('.scroll-animate, .reveal-animate, .value-card');
     elements.forEach(el => observer.observe(el));
-    console.log('Observer initialized for about page');
+   
 });
